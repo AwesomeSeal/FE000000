@@ -6,7 +6,7 @@ let Permanence = {
     return 16;
   },
   getTotalPermanenceMultiplier() {
-    return PermanenceUpgrade(4).effect().times(Complexities.permanenceMultiplier()).times(FinalityShardUpgrade(3).effect());
+    return PermanenceUpgrade(4).effect().times(Complexities.permanenceMultiplier()).times(FinalityShardUpgrade(3).effect().times(GameWins.multiplier());
   },
   getEternitiesPerPermanence() {
     return Decimal.pow(2, 24).div(this.getTotalPermanenceMultiplier());
