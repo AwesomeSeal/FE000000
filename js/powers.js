@@ -42,7 +42,7 @@ let PowerUpgrade = function (i) {
     },
     processEffect(x) {
       if (i === 1) {
-        return 1 + Math.sqrt(Math.log2(1 + x / 4)) + Galaxy.getStrengthIncrease() + FinalityShardUpgrade(7).effect();
+        return 1 + Math.sqrt(Math.log2(1 + x / 4)) + Galaxy.getStrengthIncrease() + FinalityShardUpgrade(7).effect() + GameWins.amount();
       } else if (i === 3) {
         return Math.sqrt(-Math.log2(4 / (4 + x)));
       } else {
